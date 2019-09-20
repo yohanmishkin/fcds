@@ -8,7 +8,8 @@
   "author": "",
   "directories": {
     "doc": "doc",
-    "test": "tests"
+    "test": "tests",
+    "lib": "lib"
   },
   "scripts": {
     "build": "ember build",

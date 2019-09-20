@@ -1,57 +1,49 @@
 # fcds
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+## core
 
-## Prerequisites
+- tweet
+  - id, username, text
+  - line_count
+  - lines
 
-You will need the following things properly installed on your computer.
+* timeline
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+  - tweets
+  - add(tweet)
 
-## Installation
+  ### tests
 
-* `git clone <repository-url>` this repository
-* `cd fcds`
-* `npm install`
+  - holds tweets
+  - adds tweets
+  - doesn't duplicate tweets
+  - adds tweets with duplicate content but different ids
 
-## Running / Development
+* cursor
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+  - tweets, selection
+  - starting_at
+  - up => new cursor
+  - down => new cursor
 
-### Code Generators
+  ### tests
 
-Make use of the many generators for code, try `ember help generate` for more details
+  - returns tweets starting at given tweet
+  - returns tweets starting at given index
 
-### Running Tests
+* tweet renderer
 
-* `ember test`
-* `ember test --server`
+  - tweets, selected tweet, screen height
+  - text to be rendered
 
-### Linting
+  ### tests
 
-* `npm run lint:hbs`
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
+  - renders multiple tweets
+  - highlights selected tweets
+  - renders multiline tweets
 
-### Building
+## shell
 
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+- keyboard handling
+  - j/k/c
+- data fetching
