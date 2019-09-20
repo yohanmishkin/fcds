@@ -6,4 +6,8 @@ export default class Timeline {
   get tweets() {
     return this._tweets;
   }
+
+  add(tweets) {
+    return new Timeline(this._tweets.concat(tweets));
+  }
 }

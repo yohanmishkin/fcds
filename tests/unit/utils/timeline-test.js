@@ -12,7 +12,15 @@ module("timeline", () => {
     assert.equal(timeline.tweets[0].username, tweet.username);
   });
 
-  // - adds tweets
+  test("it adds tweets", assert => {
+    let tweetA = new Tweet("abc123", "yohanmishkin");
+    let tweetB = new Tweet("def123", "yohanmishkin");
+
+    let timeline = new Timeline([tweetA]);
+
+    assert.equal(timeline.add([tweetB]).tweets.length, 2);
+  });
+
   // - doesn't duplicate tweets
   // - adds tweets with duplicate content but different ids
 });
