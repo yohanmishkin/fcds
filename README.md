@@ -1,5 +1,10 @@
 # fcds
 
+## features
+
+- fetches new tweets
+- keyboard navigation j/k
+
 ## core
 
 - tweet
@@ -45,5 +50,5 @@
 ## shell
 
 - keyboard handling
-  - j/k/c
+  - j/k
 - data fetching
